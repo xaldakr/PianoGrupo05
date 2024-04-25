@@ -36,22 +36,22 @@ public class pianorquesta extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int i) {
                         switch (i){
                             case 0:
-                                Intent intento1 = new Intent(pianojunglal.this, pianosimple.class);
+                                Intent intento1 = new Intent(pianorquesta.this, pianosimple.class);
                                 startActivity(intento1);
                                 break;
                             case 1:
-                                Toast.makeText(getApplicationContext(), "Ya estás en ese piano!!!",Toast.LENGTH_SHORT).show();
+                                Intent intento2 = new Intent(pianorquesta.this, pianojunglal.class);
+                                startActivity(intento2);
                                 break;
                             case 2:
-                                Intent intento2 = new Intent(pianojunglal.this, pianorquesta.class);
-                                startActivity(intento2);
+                                Toast.makeText(getApplicationContext(), "Ya estás en ese piano!!!",Toast.LENGTH_SHORT).show();
                                 break;
                         }
                     }
                 });
                 break;
             case "Acerca de":
-                Intent intentoabout = new Intent(pianojunglal.this, aboutus.class);
+                Intent intentoabout = new Intent(pianorquesta.this, aboutus.class);
                 startActivity(intentoabout);
                 break;
             case "Salir":
