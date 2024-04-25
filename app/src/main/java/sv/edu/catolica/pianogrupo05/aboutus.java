@@ -51,12 +51,14 @@ public class aboutus extends AppCompatActivity {
                         }
                     }
                 });
+                builderselect.create();
+                builderselect.show();
                 return true;
             case "Acerca de":
                 Toast.makeText(getApplicationContext(), "Ya estás en el Acerca de...",Toast.LENGTH_SHORT).show();
                 return true;
             case "Salir":
-                finishAffinity();
+                System.exit(0);
                 return true;
             default:
                 Toast.makeText(getApplicationContext(), "Un error ha ocurrido",Toast.LENGTH_SHORT).show();

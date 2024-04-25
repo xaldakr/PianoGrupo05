@@ -49,13 +49,15 @@ public class pianojunglal extends AppCompatActivity {
                         }
                     }
                 });
+                builderselect.create();
+                builderselect.show();
                 return true;
             case "Acerca de":
                 Intent intentoabout = new Intent(pianojunglal.this, aboutus.class);
                 startActivity(intentoabout);
                 return true;
             case "Salir":
-                finishAffinity();
+                System.exit(0);
                 return true;
             default:
                 Toast.makeText(getApplicationContext(), "Un error ha ocurrido",Toast.LENGTH_SHORT).show();
