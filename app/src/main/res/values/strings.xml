@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PianoGrupo05</string>
+    <string name="MenuPrinOpc1">Cambiar Piano</string>
+    <string name="MenuPrinOpc2">Acerca de</string>
+    <string name="MenuPrinOpc3">Salir</string>
+    <string name="DescteclaDo">Tecla Do</string>
+    <string name="DescteclaRe">Tecla Re</string>
+    <string name="DescteclaMi">Tecla Mi</string>
+    <string name="DescteclaFa">Tecla Fa</string>
+    <string name="DescteclaSol">Tecla Sol</string>
+    <string name="DescteclaLa">Tecla La</string>
+    <string name="DescteclaSi">Tecla Si</string>
+    <string name="DescteclaDo8">Tecla Do8</string>
+</resources>

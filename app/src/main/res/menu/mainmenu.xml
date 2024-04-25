@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/cambiar"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:orderInCategory="1"
+        android:title="@string/MenuPrinOpc1"
+        android:titleCondensed="@string/MenuPrinOpc1"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/acerca"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:orderInCategory="2"
+        android:title="@string/MenuPrinOpc2"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/salir"
+        android:icon="@android:drawable/ic_delete"
+        android:orderInCategory="3"
+        android:title="@string/MenuPrinOpc3"
+        app:showAsAction="ifRoom" />
+</menu>
