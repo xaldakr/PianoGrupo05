@@ -49,18 +49,17 @@ public class pianorquesta extends AppCompatActivity {
                         }
                     }
                 });
-                break;
+                return true;
             case "Acerca de":
                 Intent intentoabout = new Intent(pianorquesta.this, aboutus.class);
                 startActivity(intentoabout);
-                break;
+                return true;
             case "Salir":
                 finishAffinity();
-                break;
+                return true;
             default:
                 Toast.makeText(getApplicationContext(), "Un error ha ocurrido",Toast.LENGTH_SHORT).show();
-                break;
+                return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 }
