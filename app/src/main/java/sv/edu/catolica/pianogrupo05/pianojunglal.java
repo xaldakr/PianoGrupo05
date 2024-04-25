@@ -57,7 +57,7 @@ public class pianojunglal extends AppCompatActivity {
                 startActivity(intentoabout);
                 return true;
             case "Salir":
-                System.exit(0);
+                finishAffinity();
                 return true;
             default:
                 Toast.makeText(getApplicationContext(), "Un error ha ocurrido",Toast.LENGTH_SHORT).show();
