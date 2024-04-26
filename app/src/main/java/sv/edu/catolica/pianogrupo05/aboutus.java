@@ -58,7 +58,7 @@ public class aboutus extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Ya estás en el Acerca de...",Toast.LENGTH_SHORT).show();
                 return true;
             case "Salir":
-                finishAffinity();
+                    finishAffinity();
                 return true;
             default:
                 Toast.makeText(getApplicationContext(), "Un error ha ocurrido",Toast.LENGTH_SHORT).show();
