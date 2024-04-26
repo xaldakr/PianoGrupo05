@@ -22,65 +22,89 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/Ivs1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="0dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/DescteclaDo"
-            android:src="@drawable/teclado" />
+            android:src="@drawable/teclado"
+            />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/Ivs2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="0dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/DescteclaRe"
-            android:src="@drawable/teclare" />
-        <ImageView
+            android:src="@drawable/teclare"
+            />
+        <ImageButton
+            android:id="@+id/Ivs3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="0dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/DescteclaMi"
-            android:src="@drawable/teclami" />
+            android:src="@drawable/teclami"
+            />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/Ivs4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="0dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/DescteclaFa"
-            android:src="@drawable/teclafa" />
-        <ImageView
+            android:src="@drawable/teclafa"
+            />
+        <ImageButton
+            android:id="@+id/Ivs5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="0dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/DescteclaSol"
-            android:src="@drawable/teclasol" />
+            android:src="@drawable/teclasol"
+            />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/Ivs6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="0dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/DescteclaLa"
-            android:src="@drawable/teclala" />
-        <ImageView
+            android:src="@drawable/teclala"
+            />
+        <ImageButton
+            android:id="@+id/Ivs7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="0dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/DescteclaLa"
-            android:src="@drawable/teclasi" />
+            android:src="@drawable/teclasi"
+            />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/Ivs8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="0dp"
             android:scaleType="fitXY"
             android:contentDescription="@string/DescteclaSi"
-            android:src="@drawable/teclado8" />
+            android:src="@drawable/teclado8"
+            />
     </LinearLayout>
 </LinearLayout>

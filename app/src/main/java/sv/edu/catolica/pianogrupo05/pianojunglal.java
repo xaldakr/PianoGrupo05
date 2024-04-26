@@ -6,17 +6,80 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class pianojunglal extends AppCompatActivity {
 
+    private MediaPlayer elsonido;
+    private Toast tostadas;
+    private ImageButton ib1,ib2,ib3,ib4,ib5,ib6,ib7,ib8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pianojunglal);
+        ib1 = (ImageButton) findViewById(R.id.Ivj1);
+        ib2 = (ImageButton) findViewById(R.id.Ivj2);
+        ib3 = (ImageButton) findViewById(R.id.Ivj3);
+        ib4 = (ImageButton) findViewById(R.id.Ivj4);
+        ib5 = (ImageButton) findViewById(R.id.Ivj5);
+        ib6 = (ImageButton) findViewById(R.id.Ivj6);
+        ib7 = (ImageButton) findViewById(R.id.Ivj7);
+        ib8 = (ImageButton) findViewById(R.id.Ivj8);
+
+        ib1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TheSonido(1);
+            }
+        });
+        ib2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TheSonido(2);
+            }
+        });
+        ib3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TheSonido(3);
+            }
+        });
+        ib4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TheSonido(4);
+            }
+        });
+        ib5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TheSonido(5);
+            }
+        });
+        ib6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TheSonido(6);
+            }
+        });
+        ib7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TheSonido(7);
+            }
+        });
+        ib8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TheSonido(8);
+            }
+        });
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -57,11 +120,70 @@ public class pianojunglal extends AppCompatActivity {
                 startActivity(intentoabout);
                 return true;
             case "Salir":
+                if (elsonido != null) {
+                    if (elsonido.isPlaying()) {
+                        elsonido.stop();
+                        elsonido.release();
+                        elsonido = null;
+                    }
+                }
                 finishAffinity();
                 return true;
             default:
                 Toast.makeText(getApplicationContext(), "Un error ha ocurrido",Toast.LENGTH_SHORT).show();
                 return super.onOptionsItemSelected(item);
+        }
+    }
+    private void TheSonido (int id){
+        String datoast = "";
+        if (elsonido != null) {
+            if (elsonido.isPlaying()) {
+                elsonido.stop();
+                elsonido.release();
+            }
+        }
+        if (tostadas != null) {
+            tostadas.cancel();
+            tostadas = null;
+        }
+        elsonido = null;
+        if (id == 1){
+            elsonido = MediaPlayer.create(pianojunglal.this,R.raw.tigre);
+            datoast = "Sonido de Tigre";
+        } else if (id == 2){
+            elsonido = MediaPlayer.create(pianojunglal.this,R.raw.hyena);
+            datoast = "Sonido de Hyena";
+        } else if (id == 3){
+            elsonido = MediaPlayer.create(pianojunglal.this,R.raw.gorila);
+            datoast = "Sonido de Gorila";
+        } else if (id == 4){
+            elsonido = MediaPlayer.create(pianojunglal.this,R.raw.caiman);
+            datoast = "Sonido de Caimán";
+        } else if (id == 5){
+            elsonido = MediaPlayer.create(pianojunglal.this,R.raw.tucan);
+            datoast = "Sonido de Tucán";
+        } else if (id == 6){
+            elsonido = MediaPlayer.create(pianojunglal.this,R.raw.serpiente);
+            datoast = "Sonido de Serpiente";
+        } else if (id == 7){
+            elsonido = MediaPlayer.create(pianojunglal.this,R.raw.mono);
+            datoast = "Sonido de Mono";
+        } else if (id == 8){
+            elsonido = MediaPlayer.create(pianojunglal.this,R.raw.leon);
+            datoast = "Sonido de León";
+        } else {
+            datoast = "Ha ocurrido un error";
+        }
+
+        try {
+            if (elsonido !=null) {
+                elsonido.start();
+            }
+            tostadas = Toast.makeText(getApplicationContext(), datoast, Toast.LENGTH_SHORT);
+            tostadas.show();
+        }catch (IllegalStateException e){
+            tostadas = Toast.makeText(getApplicationContext(), e.getMessage(),Toast.LENGTH_SHORT);
+            tostadas.show();
         }
     }
 }
